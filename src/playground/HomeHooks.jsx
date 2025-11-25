@@ -16,7 +16,7 @@ function HomeHooks() {
             description: "Permite ejecutar efectos secundarios y gestionar el ciclo de vida",
             category: "Efectos",
             icon: "⚡",
-            color: "purple"
+            color: "orange"
         },
         {
             name: "useNavigate",
@@ -40,7 +40,7 @@ function HomeHooks() {
             description: "Permite gestionar estados más complejos",
             category: "Estado",
             icon: "📊",
-            color: "red"
+            color: "purple"
         },
         {
             name: "useMemo",
@@ -56,7 +56,7 @@ function HomeHooks() {
             description: "Permite memoizar funciones para optimizar rendimiento",
             category: "Performance",
             icon: "🚀",
-            color: "blue"
+            color: "pink"
         },
         {
             name: "useRef",
@@ -64,7 +64,7 @@ function HomeHooks() {
             description: "Permite crear referencias a valores",
             category: "Referencia",
             icon: "🔗",
-            color: "blue"
+            color: "yellow"
         }
     ];
 
@@ -105,7 +105,12 @@ function HomeHooks() {
         const colors = {
             blue: "bg-blue-600 hover:bg-blue-700 border-blue-500",
             purple: "bg-purple-600 hover:bg-purple-700 border-purple-500",
-            green: "bg-green-600 hover:bg-green-700 border-green-500"
+            green: "bg-green-600 hover:bg-green-700 border-green-500",
+            yellow: "bg-yellow-600 hover:bg-yellow-700 border-yellow-500",
+            red: "bg-red-600 hover:bg-red-700 border-red-500",
+            pink: "bg-pink-600 hover:bg-pink-700 border-pink-500",
+            brown: "bg-brown-600 hover:bg-brown-700 border-brown-500",
+            orange: "bg-orange-600 hover:bg-orange-700 border-orange-500"
         };
         return colors[color] || colors.blue;
     };
