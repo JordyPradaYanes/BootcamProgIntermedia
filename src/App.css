@@ -1,0 +1,6 @@
+@import "tailwindcss";
+/* Añadir este reset para eliminar el scroll bar */
+body {
+  margin: 0; /* Elimina el margen por defecto del navegador */
+  padding: 0; /* Elimina el padding por defecto */
+}
