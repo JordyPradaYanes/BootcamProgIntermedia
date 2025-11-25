@@ -1,16 +1,229 @@
-# React + Vite
+# 🚀 Bootcamp Programación Intermedia - Proyecto Clases
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-4.1.17-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-7.9.6-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-Currently, two official plugins are available:
+## 📋 Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Proyecto educativo desarrollado durante el **Bootcamp de Programación Intermedia** de la **Universidad Francisco de Paula Santander Ocaña (UFPSO)**. Este proyecto es una aplicación web moderna construida con React que demuestra el dominio de conceptos fundamentales de desarrollo frontend, incluyendo hooks de React, enrutamiento, gestión de estado y diseño responsive con Tailwind CSS.
 
-## React Compiler
+## ✨ Características Principales
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎯 Sistema de Autenticación
 
-## Expanding the ESLint configuration
+- **Login Page**: Página de inicio de sesión con validación de formularios
+- **Register Page**: Registro de nuevos usuarios con validación completa
+- **Forgot Password**: Recuperación de contraseña
+- **Reset Password**: Restablecimiento de contraseña
+- **Dashboard**: Panel de control protegido para usuarios autenticados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🎓 Playground de React Hooks
+
+Sección educativa con ejemplos interactivos de los principales hooks de React:
+
+#### 📌 **useState**
+
+- Contador interactivo con incremento/decremento
+- Cambiador de colores dinámico
+- Gestión de estado local en componentes funcionales
+
+#### ⚡ **useEffect**
+
+- **Reloj en tiempo real**: Actualización continua con `setInterval` y cleanup
+- **Contador de caracteres**: Efecto basado en dependencias
+- **Simulación de API**: Carga asíncrona de datos con estados de loading
+- **Contador de visitas**: Efecto ejecutado al montar el componente
+- **Cambio de título**: Manipulación del DOM con cleanup
+
+#### 🧭 **useNavigate**
+
+- Navegación programática entre rutas
+- Ejemplos de redirección y manejo de historial
+
+### 🎨 Diseño Moderno
+
+- **Gradientes vibrantes** y efectos glassmorphism
+- **Animaciones suaves** y transiciones fluidas
+- **Diseño responsive** adaptable a todos los dispositivos
+- **Dark mode** por defecto con paleta de colores profesional
+- **Micro-interacciones** para mejorar la experiencia de usuario
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología           | Versión | Propósito                            |
+| -------------------- | ------- | ------------------------------------ |
+| **React**            | 19.2.0  | Biblioteca principal para UI         |
+| **Vite**             | 7.2.4   | Build tool y dev server ultrarrápido |
+| **Tailwind CSS**     | 4.1.17  | Framework de CSS utility-first       |
+| **React Router DOM** | 7.9.6   | Enrutamiento y navegación            |
+| **ESLint**           | 9.39.1  | Linter para calidad de código        |
+| **PostCSS**          | 8.5.6   | Procesador de CSS                    |
+
+## 📁 Estructura del Proyecto
+
+```
+ProyectoClases/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   └── react.svg
+│   ├── pages/
+│   │   ├── DashboardPage/
+│   │   │   └── DashboardPage.jsx
+│   │   ├── ForgotPage/
+│   │   │   └── ForgotPage.jsx
+│   │   ├── LoginPage/
+│   │   │   └── LoginPage.jsx
+│   │   ├── RegisterPage/
+│   │   │   └── RegisterPage.jsx
+│   │   └── ResetPage/
+│   │       └── ResetPage.jsx
+│   ├── playground/
+│   │   ├── HomeHooks.jsx          # Menú principal de hooks
+│   │   ├── HookUseNavigate.jsx    # Ejemplos de useNavigate
+│   │   ├── UseEffect.jsx          # Ejemplos de useEffect
+│   │   └── UseState.jsx           # Ejemplos de useState
+│   ├── services/
+│   │   └── db.js                  # Simulación de base de datos
+│   ├── App.css
+│   ├── App.jsx                    # Componente principal con rutas
+│   ├── index.css                  # Estilos globales y Tailwind
+│   └── main.jsx                   # Punto de entrada
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+```
+
+## 🚀 Instalación y Uso
+
+### Prerrequisitos
+
+- Node.js (versión 18 o superior)
+- npm o yarn
+
+### Pasos de Instalación
+
+1. **Clonar el repositorio**
+
+```bash
+git clone https://github.com/JordyPradaYanes/BootcamProgIntermedia.git
+cd ProyectoClases
+```
+
+2. **Instalar dependencias**
+
+```bash
+npm install
+```
+
+3. **Ejecutar en modo desarrollo**
+
+```bash
+npm run dev
+```
+
+4. **Abrir en el navegador**
+
+```
+http://localhost:5173
+```
+
+### Scripts Disponibles
+
+| Comando           | Descripción                             |
+| ----------------- | --------------------------------------- |
+| `npm run dev`     | Inicia el servidor de desarrollo        |
+| `npm run build`   | Genera el build de producción           |
+| `npm run preview` | Previsualiza el build de producción     |
+| `npm run lint`    | Ejecuta ESLint para verificar el código |
+
+## 🎯 Rutas de la Aplicación
+
+| Ruta               | Componente      | Descripción                    |
+| ------------------ | --------------- | ------------------------------ |
+| `/`                | LoginPage       | Página de inicio de sesión     |
+| `/register`        | RegisterPage    | Registro de nuevos usuarios    |
+| `/forgot`          | ForgotPage      | Recuperación de contraseña     |
+| `/reset`           | ResetPage       | Restablecimiento de contraseña |
+| `/dashboard`       | DashboardPage   | Panel de control               |
+| `/HomeHooks`       | HomeHooks       | Menú de ejemplos de hooks      |
+| `/UseState`        | UseState        | Ejemplos de useState           |
+| `/UseEffect`       | UseEffect       | Ejemplos de useEffect          |
+| `/HookUseNavigate` | HookUseNavigate | Ejemplos de useNavigate        |
+
+## 📚 Conceptos Aprendidos
+
+### React Fundamentals
+
+- ✅ Componentes funcionales
+- ✅ Props y composición
+- ✅ Renderizado condicional
+- ✅ Listas y keys
+
+### React Hooks
+
+- ✅ **useState**: Gestión de estado local
+- ✅ **useEffect**: Efectos secundarios y ciclo de vida
+- ✅ **useNavigate**: Navegación programática
+
+### Routing
+
+- ✅ Configuración de rutas con React Router
+- ✅ Navegación entre páginas
+- ✅ Rutas protegidas
+
+### Styling
+
+- ✅ Tailwind CSS utility classes
+- ✅ Responsive design
+- ✅ Gradientes y animaciones
+- ✅ Dark mode
+
+### Best Practices
+
+- ✅ Estructura de carpetas organizada
+- ✅ Componentes reutilizables
+- ✅ Código limpio y mantenible
+- ✅ Control de versiones con Git
+
+## 🎨 Paleta de Colores
+
+El proyecto utiliza una paleta de colores moderna y profesional:
+
+- **Primary**: Purple (`purple-400` to `purple-900`)
+- **Secondary**: Pink (`pink-400` to `pink-600`)
+- **Accent**: Blue, Emerald, Orange
+- **Background**: Slate (`slate-700` to `slate-900`)
+- **Text**: White, Slate-300
+
+## 👨‍💻 Autor
+
+**Jordy Prada Yanes**
+
+- GitHub: [@JordyPradaYanes](https://github.com/JordyPradaYanes)
+- Universidad: Universidad Francisco de Paula Santander Ocaña (UFPSO)
+- Programa: Bootcamp Programación Intermedia - 8vo Semestre
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y está disponible bajo la licencia MIT.
+
+## 🙏 Agradecimientos
+
+- A los profesores del Bootcamp de Programación Intermedia de la UFPSO
+- A la comunidad de React y Vite por sus excelentes herramientas
+- A Tailwind CSS por facilitar el desarrollo de interfaces modernas
+
+---
+
+⭐ **Si este proyecto te fue útil, no olvides darle una estrella en GitHub!**
+
+Desarrollado con ❤️ durante el Bootcamp de Programación Intermedia - UFPSO 2025
