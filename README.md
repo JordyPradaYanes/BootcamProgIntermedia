@@ -11,13 +11,26 @@ Proyecto educativo desarrollado durante el **Bootcamp de Programación Intermedi
 
 ## ✨ Características Principales
 
-### 🎯 Sistema de Autenticación
+### 🎯 Sistema de Autenticación Completo
 
-- **Login Page**: Página de inicio de sesión con validación de formularios
+- **Login Page**: Página de inicio de sesión con validación de formularios y autenticación
 - **Register Page**: Registro de nuevos usuarios con validación completa
+  - Validación de email único
+  - Validación de contraseña segura (8+ caracteres, mayúscula, minúscula, número, carácter especial)
+  - Confirmación de contraseña
+  - Aceptación de términos y condiciones
 - **Forgot Password**: Recuperación de contraseña
+  - Verificación de email existente
+  - Simulación de envío de correo (⚠️ **Nota**: No envía correos reales, solo simula el proceso)
+  - Redirección automática a página de restablecimiento
 - **Reset Password**: Restablecimiento de contraseña
+  - Validación de contraseña en tiempo real con indicadores visuales
+  - Verificación de requisitos de seguridad
+  - Actualización de contraseña en localStorage
 - **Dashboard**: Panel de control protegido para usuarios autenticados
+  - Muestra información del usuario
+  - Estadísticas y actividad reciente
+  - Acciones rápidas y navegación
 
 ### 🎓 Playground de React Hooks
 
@@ -42,13 +55,50 @@ Sección educativa con ejemplos interactivos de los principales hooks de React:
 - Navegación programática entre rutas
 - Ejemplos de redirección y manejo de historial
 
-### 🎨 Diseño Moderno
+#### 🌐 **useContext**
 
-- **Gradientes vibrantes** y efectos glassmorphism
-- **Animaciones suaves** y transiciones fluidas
-- **Diseño responsive** adaptable a todos los dispositivos
-- **Dark mode** por defecto con paleta de colores profesional
-- **Micro-interacciones** para mejorar la experiencia de usuario
+- Compartir datos entre componentes sin prop drilling
+- Ejemplo de tema (dark/light mode)
+- Sistema de internacionalización (español/inglés)
+- Gestión de usuario global
+
+#### 📊 **useReducer**
+
+- Gestión de estado complejo con acciones
+- Contador con múltiples acciones (incrementar, decrementar, reset)
+- Lista de tareas (TODO list) con estadísticas
+- Comparación con useState
+
+#### 🚀 **useMemo**
+
+- Optimización de cálculos costosos
+- Comparación de rendimiento (con/sin memoización)
+- Filtrado de números con memoización
+- Indicadores visuales de recálculo en consola
+
+#### 🔄 **useCallback**
+
+- Memoización de funciones
+- Comparación de rendimiento con React.memo
+- Ejemplos con y sin useCallback
+- Funciones con parámetros
+
+#### 🔗 **useRef**
+
+- Referencias a elementos DOM (focus input)
+- Contador de renders sin causar re-renders
+- Guardar valores anteriores
+- Gestión de timers/intervals (cronómetro)
+
+### 🎨 Diseño Profesional y Corporativo
+
+- **Paleta de colores corporativa**: Azul (`blue-600`), gris oscuro (`slate-800`), blanco
+- **Diseño minimalista**: Espacios blancos generosos, tipografía clara
+- **Consistencia visual**: Mismo estilo en todas las páginas
+- **Responsive**: Adaptable a todos los dispositivos (móvil, tablet, desktop)
+- **Accesibilidad**: Alto contraste y legibilidad
+- **Animaciones sutiles**: Transiciones suaves y efectos hover profesionales
+- **Iconos SVG**: Monocromáticos y consistentes
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -194,15 +244,53 @@ http://localhost:5173
 - ✅ Código limpio y mantenible
 - ✅ Control de versiones con Git
 
-## 🎨 Paleta de Colores
+## 🎨 Paleta de Colores Corporativa
 
-El proyecto utiliza una paleta de colores moderna y profesional:
+El proyecto utiliza una paleta de colores profesional y corporativa:
 
-- **Primary**: Purple (`purple-400` to `purple-900`)
-- **Secondary**: Pink (`pink-400` to `pink-600`)
-- **Accent**: Blue, Emerald, Orange
-- **Background**: Slate (`slate-700` to `slate-900`)
-- **Text**: White, Slate-300
+- **Primary**: Azul (`blue-600`, `blue-700`)
+- **Dark Background**: Gris oscuro (`slate-800`)
+- **Light Background**: Gris claro (`gray-50`)
+- **Cards**: Blanco (`white`)
+- **Text Primary**: Gris oscuro (`gray-900`)
+- **Text Secondary**: Gris medio (`gray-600`)
+- **Borders**: Gris claro (`gray-200`, `gray-300`)
+- **Success**: Verde (`green-600`)
+- **Error**: Rojo (`red-500`, `red-600`)
+
+## ⚠️ Notas Importantes
+
+### Almacenamiento de Datos
+
+- **LocalStorage**: Los datos de usuarios se almacenan en `localStorage` del navegador
+  - `users_db`: Array de usuarios registrados
+  - `current_user`: Sesión del usuario actual
+- **⚠️ Seguridad**: Las contraseñas se almacenan en **texto plano** (solo para fines educativos)
+  - En producción, las contraseñas deben ser hasheadas (bcrypt, argon2, etc.)
+  - Nunca almacenar contraseñas en texto plano en aplicaciones reales
+
+### Limitaciones
+
+- **Email**: El sistema **NO envía correos reales**
+  - La funcionalidad de "Forgot Password" solo simula el envío
+  - Para enviar correos reales, se necesita un backend con servicios como:
+    - SendGrid
+    - Nodemailer
+    - AWS SES
+    - Mailgun
+- **Base de datos**: No hay base de datos real, solo localStorage
+- **Backend**: No hay servidor backend, todo es frontend
+
+### Recomendaciones para Producción
+
+Si deseas llevar este proyecto a producción, considera:
+
+1. **Backend**: Implementar un servidor (Node.js, Python, etc.)
+2. **Base de datos**: PostgreSQL, MongoDB, MySQL
+3. **Autenticación**: JWT tokens, OAuth, Auth0
+4. **Hashing de contraseñas**: bcrypt, argon2
+5. **Envío de emails**: SendGrid, Nodemailer
+6. **Hosting**: Vercel, Netlify, AWS, Heroku
 
 ## 👨‍💻 Autor
 
